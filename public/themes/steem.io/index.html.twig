@@ -1,0 +1,16 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+  <h2 class="text-center">Steem Blog</h2>
+  <h4 class="text-center vpc visible full-visible"><b>- Recent updates from the Steem team -</b></h4>
+  <hr class="steemer">
+
+  {% for post in posts %}
+    {% include 'partials/preview.html.twig' with { post: post, preview: true } %}
+    {% if not loop.last %}<hr class="steemer">{% endif %}
+  {% endfor %}
+  <hr class="steemer">
+  {% include 'partials/paginator.html.twig' %}
+
+{% endblock %}

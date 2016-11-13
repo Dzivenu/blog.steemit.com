@@ -1,0 +1,11 @@
+<div class="col-md-offset-0">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <ul class="pager">
+      {% if page > 1 %}
+      <li class="previous"><a href="?page={{ page - 1 }}" class="button left">Previous Page</a></li>
+      {% endif %}
+      <li class="next"><a href="?page={{ page + 1 }}" class="button right">Next Page</a></li>
+    </div>
+  </div>
+</div>
