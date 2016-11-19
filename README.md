@@ -1,6 +1,14 @@
 A proof of concept blog for steem.io, built using greymass/reprint.
 
+## Installation
+
+To install all of the dependancies, use composer:
+
+`composer install`
+
 ## Configuration
+
+Create the following files with the following configuration.
 
 ### resources/config/config.yml
 
@@ -53,3 +61,11 @@ config.routes:
     method: ['get']
     controller: 'Reprint\Controller\Blog::listAction'
 ```
+
+## Development
+
+Working on this build is easiest with Docker, simple change into the project folder and run:
+
+`docker-compose build && docker-compose up`
+
+This will create a docker container with the appropriate software and map port 80 of your virtual machine to the container. This also creates a volume from the project root onto the container, so any edits you make will show upon page reload.
