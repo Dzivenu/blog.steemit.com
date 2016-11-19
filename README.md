@@ -5,22 +5,27 @@ A proof of concept blog for steem.io, built using greymass/reprint.
 ### resources/config/config.yml
 
 ```
-# Choose the locale to localize content for
-locale: 'en'
+# reprint config
+reprint:
+  # Choose the locale to localize content for
+  locale: 'en'
 
-# Choose a theme by name
+# blog config
 blog:
+  # Choose a theme by name
   theme: 'steem.io'
   title: 'Steem Blog'
+  # Filter the content to
+  filters:
+    # Accounts to load activity of
+    accounts:
+      'steemitblog':
+        - post
 
-# Blog Configuration
+# steemd connection
 steem:
   # Steem Node to retreive data
   host: 'https://node.steem.ws'
-  # Accounts to load activity of
-  accounts:
-    'steemitblog':
-      - post
 ```
 
 ### resources/config/routes.yml
